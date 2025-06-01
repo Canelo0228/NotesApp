@@ -1,0 +1,65 @@
+[
+  {
+    "ContainingType": "NotesApp.Controllers.NoteController",
+    "Method": "Get",
+    "RelativePath": "api/Note",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NotesApp.Controllers.NoteController",
+    "Method": "Post",
+    "RelativePath": "api/Note",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sv",
+        "Type": "NotesApp.Core.Application.DTOs.Note.NoteDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NotesApp.Controllers.NoteController",
+    "Method": "Put",
+    "RelativePath": "api/Note/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sv",
+        "Type": "NotesApp.Core.Application.DTOs.Note.NoteDTO",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NotesApp.Controllers.NoteController",
+    "Method": "Delete",
+    "RelativePath": "api/Note/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

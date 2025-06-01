@@ -1,0 +1,11 @@
+C:\Users\Canelo\source\repos\NotesApp\NotesApp.Core.Domain\bin\Debug\net8.0\NotesApp.Core.Domain.deps.json
+C:\Users\Canelo\source\repos\NotesApp\NotesApp.Core.Domain\bin\Debug\net8.0\NotesApp.Core.Domain.dll
+C:\Users\Canelo\source\repos\NotesApp\NotesApp.Core.Domain\bin\Debug\net8.0\NotesApp.Core.Domain.pdb
+C:\Users\Canelo\source\repos\NotesApp\NotesApp.Core.Domain\obj\Debug\net8.0\NotesApp.Core.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Canelo\source\repos\NotesApp\NotesApp.Core.Domain\obj\Debug\net8.0\NotesApp.Core.Domain.AssemblyInfoInputs.cache
+C:\Users\Canelo\source\repos\NotesApp\NotesApp.Core.Domain\obj\Debug\net8.0\NotesApp.Core.Domain.AssemblyInfo.cs
+C:\Users\Canelo\source\repos\NotesApp\NotesApp.Core.Domain\obj\Debug\net8.0\NotesApp.Core.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Canelo\source\repos\NotesApp\NotesApp.Core.Domain\obj\Debug\net8.0\NotesApp.Core.Domain.dll
+C:\Users\Canelo\source\repos\NotesApp\NotesApp.Core.Domain\obj\Debug\net8.0\refint\NotesApp.Core.Domain.dll
+C:\Users\Canelo\source\repos\NotesApp\NotesApp.Core.Domain\obj\Debug\net8.0\NotesApp.Core.Domain.pdb
+C:\Users\Canelo\source\repos\NotesApp\NotesApp.Core.Domain\obj\Debug\net8.0\ref\NotesApp.Core.Domain.dll
