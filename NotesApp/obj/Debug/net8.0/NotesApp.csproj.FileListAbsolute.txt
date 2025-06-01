@@ -148,3 +148,4 @@ C:\Users\Canelo\source\repos\NotesApp\NotesApp\bin\Debug\net8.0\zh-Hans\Microsof
 C:\Users\Canelo\source\repos\NotesApp\NotesApp\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Canelo\source\repos\NotesApp\NotesApp\bin\Debug\net8.0\AutoMapper.dll
 C:\Users\Canelo\source\repos\NotesApp\NotesApp\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Canelo\source\repos\NotesApp\NotesApp\obj\Debug\net8.0\NotesApp.sourcelink.json

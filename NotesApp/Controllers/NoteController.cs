@@ -37,6 +37,50 @@ namespace NotesApp.Controllers
             }
         }
 
+        [HttpGet("ActivesNotes")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<IActionResult> GetActiveNotes()
+        {
+            try
+            {
+                var archiveNotes = await _noteService.GetByStatus(false);
+                if (archiveNotes == null || archiveNotes.Count == 0)
+                {
+                    return NotFound();
+                }
+                return Ok(archiveNotes);
+
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
+        }
+
+        [HttpGet("ArchivedNotes")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<IActionResult> GetArchiveNotes()
+        {
+            try
+            {
+                var archiveNotes = await _noteService.GetByStatus(true);
+                if (archiveNotes == null || archiveNotes.Count == 0)
+                {
+                    return NotFound();
+                }
+                return Ok(archiveNotes);
+
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
+        }
+
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -84,7 +128,7 @@ namespace NotesApp.Controllers
         }
 
         [HttpDelete("{id}")]
-        [ProducesResponseType(StatusCodes.Status204)]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> Delete(int id)
         {
