@@ -57,5 +57,9 @@ namespace NotesApp.Infrastructure.Persistence.Repositories
         {
             return await _dbContext.Set<Note>().FindAsync(id);
         }
+
+        public async Task SaveChanges()
+        {
+            await _dbContext.SaveChangesAsync();        }
     }
 }

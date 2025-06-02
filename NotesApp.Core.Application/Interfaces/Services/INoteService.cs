@@ -14,5 +14,7 @@ namespace NotesApp.Core.Application.Interfaces.Services
         Task<List<NoteDTO>> GetAll();
 
         Task<List<Note>> GetByStatus(bool isArhived);
+
+        Task<bool> SetArchiveStatus(int id, bool isArchived);
     }
 }

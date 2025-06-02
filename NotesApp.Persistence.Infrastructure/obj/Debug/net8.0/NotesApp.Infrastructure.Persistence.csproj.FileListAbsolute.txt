@@ -17,3 +17,4 @@ C:\Users\Canelo\source\repos\NotesApp\NotesApp.Persistence.Infrastructure\obj\De
 C:\Users\Canelo\source\repos\NotesApp\NotesApp.Persistence.Infrastructure\obj\Debug\net8.0\ref\NotesApp.Infrastructure.Persistence.dll
 C:\Users\Canelo\source\repos\NotesApp\NotesApp.Persistence.Infrastructure\bin\Debug\net8.0\NotesApp.Core.Application.dll
 C:\Users\Canelo\source\repos\NotesApp\NotesApp.Persistence.Infrastructure\bin\Debug\net8.0\NotesApp.Core.Application.pdb
+C:\Users\Canelo\source\repos\NotesApp\NotesApp.Persistence.Infrastructure\obj\Debug\net8.0\NotesApp.Infrastructure.Persistence.sourcelink.json

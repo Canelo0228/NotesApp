@@ -56,5 +56,17 @@ namespace NotesApp.Core.Application.Services
 
             return notes;
         }
+
+        public async Task<bool> SetArchiveStatus(int id, bool isArchived)
+        {
+            var note = await _noteRepository.GetById(id);
+            if (note == null) return false;
+            note.IsArchived = isArchived;
+
+            await _noteRepository.SaveChanges();
+
+            return true;
+        }
+
     }
 }

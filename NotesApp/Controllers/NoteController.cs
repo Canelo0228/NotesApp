@@ -104,6 +104,7 @@ namespace NotesApp.Controllers
 
         [HttpPut("{id}")]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> Put(NoteDTO sv, int id)
@@ -118,8 +119,30 @@ namespace NotesApp.Controllers
                 {
                     return BadRequest();
                 }
+                if (sv == null)
+                {
+                    return NotFound();
+                }
                 await _noteService.Update(sv, id);
                 return Ok(sv);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
+        }
+
+        [HttpPatch("{id}")]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<IActionResult> PatchNoteStatus(int id, [FromBody] NoteStatusDTO dto)
+        {
+            try
+            {
+                var updated = await _noteService.SetArchiveStatus(id, dto.IsArchived);
+                if (!updated) return NotFound();
+                return NoContent();
             }
             catch (Exception ex)
             {

@@ -13,6 +13,9 @@ namespace NotesApp.Core.Application.DTOs.Note
 
         [DataType(DataType.Text)]
         public string? Description { get; set; }
+
+        [DataType(DataType.Text)]
+        [Required(ErrorMessage = "The Status of the note is required")]
         public bool IsArchived { get; set; }
     }
 }
