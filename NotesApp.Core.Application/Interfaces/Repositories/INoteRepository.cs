@@ -16,7 +16,5 @@ namespace NotesApp.Core.Application.Interfaces.Repositories
         Task<List<Note>> GetByStatus(Expression<Func<Note, bool>> filter);
 
         Task<Note> GetById(int id);
-
-        Task SaveChanges();
     }
 }

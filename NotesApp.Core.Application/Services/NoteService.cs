@@ -48,13 +48,13 @@ namespace NotesApp.Core.Application.Services
             return _mapper.Map<List<NoteDTO>>(notes);
         }
 
-        public async Task<List<Note>> GetByStatus(bool isArhived)
+        public async Task<List<NoteDTO>> GetByStatus(bool isArhived)
         {
             Expression<Func<Note, bool>> filter = n => n.IsArchived == isArhived;
 
             var notes = await _noteRepository.GetByStatus(filter);
 
-            return notes;
+            return _mapper.Map<List<NoteDTO>>(notes);
         }
 
         public async Task<bool> SetArchiveStatus(int id, bool isArchived)
@@ -63,7 +63,7 @@ namespace NotesApp.Core.Application.Services
             if (note == null) return false;
             note.IsArchived = isArchived;
 
-            await _noteRepository.SaveChanges();
+            await _noteRepository.Update(note, id);
 
             return true;
         }

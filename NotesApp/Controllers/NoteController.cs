@@ -2,7 +2,7 @@
 using NotesApp.Core.Application.DTOs.Note;
 using NotesApp.Core.Application.Interfaces.Services;
 
-namespace NotesApp.Controllers
+namespace NotesAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -132,7 +132,7 @@ namespace NotesApp.Controllers
             }
         }
 
-        [HttpPatch("{id}")]
+        [HttpPatch("SetNotesStatus/{id}")]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
@@ -150,7 +150,7 @@ namespace NotesApp.Controllers
             }
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete("Delete/{id}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> Delete(int id)

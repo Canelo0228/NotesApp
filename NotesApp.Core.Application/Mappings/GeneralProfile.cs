@@ -8,8 +8,8 @@ namespace NotesApp.Core.Application.Mappings
     {
         public GeneralProfile()
         {
-            CreateMap<Note, NoteDTO>();
-            CreateMap<NoteDTO, Note>();
+            CreateMap<Note, NoteDTO>()
+                .ReverseMap();
         }
     }
 }

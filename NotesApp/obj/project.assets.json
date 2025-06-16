@@ -4529,9 +4529,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Canelo\\source\\repos\\NotesApp\\NotesApp\\NotesApp.csproj",
-      "projectName": "NotesApp",
-      "projectPath": "C:\\Users\\Canelo\\source\\repos\\NotesApp\\NotesApp\\NotesApp.csproj",
+      "projectUniqueName": "C:\\Users\\Canelo\\source\\repos\\NotesApp\\NotesApp\\NotesAPI.csproj",
+      "projectName": "NotesAPI",
+      "projectPath": "C:\\Users\\Canelo\\source\\repos\\NotesApp\\NotesApp\\NotesAPI.csproj",
       "packagesPath": "C:\\Users\\Canelo\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Canelo\\source\\repos\\NotesApp\\NotesApp\\obj\\",
       "projectStyle": "PackageReference",

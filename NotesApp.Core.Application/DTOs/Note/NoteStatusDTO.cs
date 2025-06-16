@@ -5,7 +5,7 @@ namespace NotesApp.Core.Application.DTOs.Note
     public class NoteStatusDTO
     {
         [DataType(DataType.Text)]
-        [Required(ErrorMessage = "The status of the note ir Required")]
+        [Required(ErrorMessage = "The status of the note is Required")]
         public bool IsArchived { get; set; }
     }
 }

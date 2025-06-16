@@ -1,6 +1,6 @@
 [
   {
-    "ContainingType": "NotesApp.Controllers.NoteController",
+    "ContainingType": "NotesAPI.Controllers.NoteController",
     "Method": "Get",
     "RelativePath": "api/Note",
     "HttpMethod": "GET",
@@ -30,7 +30,7 @@
     ]
   },
   {
-    "ContainingType": "NotesApp.Controllers.NoteController",
+    "ContainingType": "NotesAPI.Controllers.NoteController",
     "Method": "Post",
     "RelativePath": "api/Note",
     "HttpMethod": "POST",
@@ -66,57 +66,7 @@
     ]
   },
   {
-    "ContainingType": "NotesApp.Controllers.NoteController",
-    "Method": "Put",
-    "RelativePath": "api/Note/{id}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "sv",
-        "Type": "NotesApp.Core.Application.DTOs.Note.NoteDTO",
-        "IsRequired": true
-      },
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 400
-      },
-      {
-        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 404
-      },
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      },
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 500
-      }
-    ]
-  },
-  {
-    "ContainingType": "NotesApp.Controllers.NoteController",
+    "ContainingType": "NotesAPI.Controllers.NoteController",
     "Method": "PatchNoteStatus",
     "RelativePath": "api/Note/{id}",
     "HttpMethod": "PATCH",
@@ -157,7 +107,7 @@
     ]
   },
   {
-    "ContainingType": "NotesApp.Controllers.NoteController",
+    "ContainingType": "NotesAPI.Controllers.NoteController",
     "Method": "Delete",
     "RelativePath": "api/Note/{id}",
     "HttpMethod": "DELETE",
@@ -184,7 +134,7 @@
     ]
   },
   {
-    "ContainingType": "NotesApp.Controllers.NoteController",
+    "ContainingType": "NotesAPI.Controllers.NoteController",
     "Method": "GetActiveNotes",
     "RelativePath": "api/Note/ActivesNotes",
     "HttpMethod": "GET",
@@ -214,7 +164,7 @@
     ]
   },
   {
-    "ContainingType": "NotesApp.Controllers.NoteController",
+    "ContainingType": "NotesAPI.Controllers.NoteController",
     "Method": "GetArchiveNotes",
     "RelativePath": "api/Note/ArchivedNotes",
     "HttpMethod": "GET",
@@ -235,6 +185,56 @@
           "text/json"
         ],
         "StatusCode": 404
+      },
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 500
+      }
+    ]
+  },
+  {
+    "ContainingType": "NotesAPI.Controllers.NoteController",
+    "Method": "Put",
+    "RelativePath": "api/Note/SetNotesStatus/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sv",
+        "Type": "NotesApp.Core.Application.DTOs.Note.NoteDTO",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 404
+      },
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
       },
       {
         "Type": "System.Void",

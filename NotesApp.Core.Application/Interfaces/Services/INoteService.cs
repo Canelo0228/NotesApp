@@ -1,5 +1,4 @@
 ﻿using NotesApp.Core.Application.DTOs.Note;
-using NotesApp.Core.Domain.Entities;
 
 namespace NotesApp.Core.Application.Interfaces.Services
 {
@@ -13,7 +12,7 @@ namespace NotesApp.Core.Application.Interfaces.Services
 
         Task<List<NoteDTO>> GetAll();
 
-        Task<List<Note>> GetByStatus(bool isArhived);
+        Task<List<NoteDTO>> GetByStatus(bool isArhived);
 
         Task<bool> SetArchiveStatus(int id, bool isArchived);
     }
