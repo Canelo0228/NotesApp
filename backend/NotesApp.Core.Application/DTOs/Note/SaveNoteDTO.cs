@@ -2,10 +2,8 @@
 
 namespace NotesApp.Core.Application.DTOs.Note
 {
-    public class NoteDTO
+    public class SaveNoteDTO
     {
-        public int Id { get; set; }
-
         [DataType(DataType.Text)]
         [Required(ErrorMessage = "The Title is Required")]
         [MaxLength(255)]

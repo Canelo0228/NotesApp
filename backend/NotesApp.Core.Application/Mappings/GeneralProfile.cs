@@ -10,6 +10,11 @@ namespace NotesApp.Core.Application.Mappings
         {
             CreateMap<Note, NoteDTO>()
                 .ReverseMap();
+            CreateMap<Note, SaveNoteDTO>()
+                .ReverseMap();
+            CreateMap<NoteDTO, SaveNoteDTO>()
+                .ReverseMap()
+                .ForMember(dest => dest.Id, opt => opt.Ignore());
         }
     }
 }

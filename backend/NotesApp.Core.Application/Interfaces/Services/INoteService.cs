@@ -4,9 +4,9 @@ namespace NotesApp.Core.Application.Interfaces.Services
 {
     public interface INoteService
     {
-        Task<NoteDTO> AddAsync(NoteDTO sv);
+        Task<NoteDTO> AddAsync(SaveNoteDTO sv);
 
-        Task UpdateAsync(NoteDTO sn, int id);
+        Task UpdateAsync(SaveNoteDTO sn, int id);
 
         Task DeleteAsync(int id);
 

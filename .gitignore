@@ -1,9 +1,18 @@
-# .NET
-bin/
-obj/
-*.user
-*.suo
-.vs/
+# ── Frontend ──────────────────────────────
+frontend/node_modules/
+frontend/dist/
+frontend/.angular/
 
-# Others
-.DS_Store
+# ── Backend ───────────────────────────────
+backend/**/bin/
+backend/**/obj/
+backend/**/.vs/
+backend/**/*.user
+
+# ── General ───────────────────────────────
+*.DS_Store
+.env
+ 
+# ── Docker ────────────────────────────────
+.docker/
+docker-compose.override.yml

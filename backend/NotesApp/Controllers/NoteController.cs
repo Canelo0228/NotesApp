@@ -53,7 +53,7 @@ namespace NotesAPI.Controllers
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> Post(NoteDTO sv)
+        public async Task<IActionResult> Post(SaveNoteDTO sv)
         {
             try
             {
@@ -75,7 +75,7 @@ namespace NotesAPI.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> Put(NoteDTO sv, int id)
+        public async Task<IActionResult> Put(SaveNoteDTO sv, int id)
         {
             try
             {

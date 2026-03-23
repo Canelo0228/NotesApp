@@ -18,16 +18,14 @@ namespace NotesApp.Core.Application.Services
             _mapper = mapper;
         }
 
-        public async Task<NoteDTO> AddAsync(NoteDTO sv)
+        public async Task<NoteDTO> AddAsync(SaveNoteDTO sv)
         {
             Note note = _mapper.Map<Note>(sv);
             note = await _repository.AddAsync(note);
-            NoteDTO SaveNote = _mapper.Map<NoteDTO>(note);
-
-            return SaveNote;
+            return _mapper.Map<NoteDTO>(sv);
         }
 
-        public async Task UpdateAsync(NoteDTO sn, int id)
+        public async Task UpdateAsync(SaveNoteDTO sn, int id)
         {
             var note = await _repository.GetByIdAsync(id);
 

@@ -1,0 +1,53 @@
+version: '3.8'
+
+services:
+
+  # ── SQL Server ──────────────────────────────────────────────
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: notesapp-db
+    environment:
+      SA_PASSWORD: "NotesApp123!"
+      ACCEPT_EULA: "Y"
+      MSSQL_PID: "Express"
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqlserver_data:/var/opt/mssql
+    healthcheck:
+      test: ["CMD", "/opt/mssql-tools/bin/sqlcmd", "-S", "localhost", "-U", "sa", "-P", "NotesApp123!", "-Q", "SELECT 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+
+  # ── .NET Backend ────────────────────────────────────────────
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: notesapp-backend
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Production"
+      ASPNETCORE_URLS: "http://+:5017"
+      ConnectionStrings__ConnectionString: "Server=sqlserver;Database=NotesApp;User Id=sa;Password=NotesApp123!;TrustServerCertificate=True;"
+      FrontendUrl: "http://localhost:3000"
+    ports:
+      - "5017:5017"
+    depends_on:
+      sqlserver:
+        condition: service_healthy
+
+  # ── Angular Frontend ────────────────────────────────────────
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: notesapp-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+
+volumes:
+  sqlserver_data:
