@@ -10,7 +10,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
       <div class="header__inner">
         <div class="header__brand">
           <span class="header__logo-icon">✦</span>
-          <span class="header__logo-text">NoteKeeper</span>
+          <span class="header__logo-text">NotesApp</span>
         </div>
 
         <nav class="header__nav">

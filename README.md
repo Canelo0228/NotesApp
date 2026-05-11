@@ -242,9 +242,3 @@ Frontend available at: `http://localhost:3000`
 - View archived notes list
 - Toast notifications for all operations
 - Global HTTP error handling via interceptor
-
----
-
-## Login
-
-This application does not require login. No authentication is implemented in Phase 1.
